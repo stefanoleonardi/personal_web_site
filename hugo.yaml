@@ -1,0 +1,60 @@
+# Hugo Blox / Hugo Academic Configuration for Prof. Stefano Leonardi
+baseURL: 'https://stefanoleonardi.github.io/'
+title: 'Prof. Stefano Leonardi | Sapienza University of Rome'
+theme:
+  - hugo-blox-academic
+
+languageCode: 'en-us'
+defaultContentLanguage: 'en'
+enableRobotsTXT: true
+
+module:
+  imports:
+    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-academic
+    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-reveal
+
+params:
+  site:
+    author: 'Prof. Stefano Leonardi'
+    description: 'Full Professor of Computer Science at DIAG, Sapienza University of Rome. Algorithms and Data Science Research Group.'
+    theme: minimal
+    font: academic
+
+  appearance:
+    mode: light # clean white background light theme
+    theme: minimal
+
+  features:
+    math:
+      enable: true
+    syntax_highlighter:
+      enable: true
+
+  header:
+    navbar:
+      enable: true
+      align: right
+      show_logo: true
+
+  footer:
+    copyright:
+      notice: '© {year} Prof. Stefano Leonardi • Sapienza University of Rome, DIAG (Via Ariosto 25, Room B205)'
+
+# Navigation Menus matching index.html tabs (Teaching placed last)
+menus:
+  main:
+    - name: 'About & Highlights'
+      url: '#about'
+      weight: 10
+    - name: 'Publications (Top 10)'
+      url: '#publications'
+      weight: 20
+    - name: 'Service & Committees'
+      url: '#service'
+      weight: 30
+    - name: 'Research Group'
+      url: '#group'
+      weight: 40
+    - name: 'Teaching (2025–2026)'
+      url: '#teaching'
+      weight: 50
